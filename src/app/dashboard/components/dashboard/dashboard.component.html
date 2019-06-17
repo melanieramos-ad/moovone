@@ -4,14 +4,16 @@
       *ngIf="user"></app-user>
   </mat-card-content>
 </mat-card>
+
 <div class="animes">
+  <div class="currentPage">Page: {{currentPage}}</div>
   <mat-toolbar class="anime-controls">
-    <span class="prev"
-      *ngIf="currentPage > 1"
-      (click)="prevPage()">Prev</span>
+    <button mat-raised-button color="secondary"
+      *ngIf="currentPage > 1"    (click)="prevPage()">Prev</button>
+
 
     <div class="middle" *ngIf="animes">
-      <div class="currentPage">Page: {{currentPage}}</div>
+      
       <div class="sort">
         <mat-form-field>
           <mat-select placeholder="Order page by" (valueChange)="sortList($event)">
@@ -23,10 +25,13 @@
       </div>
     </div>
 
-    <span class="next"
+    <button mat-raised-button color="primary" 
       *ngIf="maxPage && currentPage < maxPage"
-      (click)="nextPage()">Next</span>
+      (click)="nextPage()">Next</button>
+
   </mat-toolbar>
+  
+
   <div class="anime-list"
     *ngIf="animes && !loading">
     <app-anime *ngFor="let anime of animes; trackBy: trackById"
