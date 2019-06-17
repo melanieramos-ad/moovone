@@ -1,0 +1,8 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  min-height: calc(100vh - 64px); // find a way to maybe replace this with $mat-toolbar-height-desktop
+}
