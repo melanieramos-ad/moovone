@@ -3,6 +3,7 @@ import { Title } from '@angular/platform-browser';
 
 export const siteTitle = 'AnimeBrowsr';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,3 +18,4 @@ export class AppComponent implements OnInit {
     this.titleService.setTitle(siteTitle);
   }
 }
+
