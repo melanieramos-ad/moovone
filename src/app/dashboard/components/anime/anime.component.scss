@@ -1,3 +1,5 @@
+@import 'theme';
+
 :host {
   text-align: center;
 }
@@ -5,4 +7,9 @@
 mat-card {
   height: 100%;
   box-sizing: border-box;
+}
+
+.score {
+	bottom: 20px;
+    position: absolute;
 }
